@@ -7,14 +7,14 @@ def TexTToBinary(a):
     else:
         return "00"+str(bin(ord(a)))[2:]
 
-
 def IntToBinary(a):
     def zeros(x):
-        return x + "0"
+        if(len(x) != 8):
+            zeros(out+"0")
+        else:
+            return out
     out = bin(a)
-    x = out[2:]
-    if(len(x) != 8):
-        zeros(len(x))
+    zeros(out[2:])
 
 def main(maininput):
     def step9(input9a,input9b):
