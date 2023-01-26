@@ -8,24 +8,21 @@ def TexTToBinary(a):
         return "00"+str(bin(ord(a)))[2:]
 
 def IntToBinary(a):
-    def zeros(x):
-        if(len(x) != 8):
-            zeros(out+"0")
-        else:
-            return out
-    out = bin(a)
-    zeros(out[2:])
+    out = bin(a)[2:]
+    if(len(out) != 8):
+        return out+"0"
+    else:
+        return out
+   
 
 def main(maininput):
     def step9(input9a,input9b):
-        a_j = len(input9a)
         a_k = input9b
-        #print((bin(a_j)))
-        print(IntToBinary(88))
-        #print(a_j)
+        print(IntToBinary(len(input9a)))
 
         #print(int(len(input9b)/8)) # the 0's
-        #print(a_k)
+        for i in range(0,int(len(input9b)/8)):
+            print(i)
 
         
     def step8(input8a,input8b):
