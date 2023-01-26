@@ -16,14 +16,15 @@ def IntToBinary(a):
    
 
 def main(maininput):
+    def step10(input10):
+        print(input10)        
+
     def step9(input9a,input9b):
-        a_k = input9b
-        print(IntToBinary(len(input9a)))
-
-        #print(int(len(input9b)/8)) # the 0's
+        a_j = input9b
         for i in range(0,int(len(input9b)/8)):
-            print(i)
-
+            a_j.append("00000000")
+        a_j.append(IntToBinary(len(input9a)))
+        step10(a_j)
         
     def step8(input8a,input8b):
         a_i = []
