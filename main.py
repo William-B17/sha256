@@ -9,10 +9,13 @@ def TexTToBinary(a):
 
 def IntToBinary(a):
     out = bin(a)[2:]
-    if(len(out) != 8):
+    if(len(out) < 8):
         return out+"0"
     else:
-        return out
+        if(len(out) > 8):
+            return out[:1]
+        else:
+            return out
    
 
 def main(maininput):
@@ -78,4 +81,4 @@ def main(maininput):
         step2(a_a_out)
     step1(maininput)
 
-main("Hello world")
+main("Hello world") # max 54
