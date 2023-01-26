@@ -1,16 +1,32 @@
-
 import math
 
-def toBinary(a):
+def TexTToBinary(a):
     out = "0"+str(bin(ord(a)))[2:]
     if(len(out) == 8):
         return out
     else:
         return "00"+str(bin(ord(a)))[2:]
 
+
+def IntToBinary(a):
+    def zeros(x):
+        return x + "0"
+    out = bin(a)
+    x = out[2:]
+    if(len(x) != 8):
+        zeros(len(x))
+
 def main(maininput):
     def step9(input9a,input9b):
-        input9a = []
+        a_j = len(input9a)
+        a_k = input9b
+        #print((bin(a_j)))
+        print(IntToBinary(88))
+        #print(a_j)
+
+        #print(int(len(input9b)/8)) # the 0's
+        #print(a_k)
+
         
     def step8(input8a,input8b):
         a_i = []
@@ -26,7 +42,7 @@ def main(maininput):
         a_h.pop(-1)
         step8(a_h,input7)
 
-    def step6(input6a,input6b,input6c):
+    def step6(input6a,input6b,input6c): # what i need, what i have, already existing
         a_f = input6c
         a_g = int(input6a/8)
         for i in range(0,a_g):
@@ -60,8 +76,8 @@ def main(maininput):
         a_a_out = []
         
         for i in [*input1]:
-            a_a_out.append(toBinary(i))
+            a_a_out.append(TexTToBinary(i))
         step2(a_a_out)
     step1(maininput)
 
-main("hello world")
+main("Hello world")
